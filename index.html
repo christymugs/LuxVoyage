@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Flights</a></li>
+                    <li><a href="#">My Trips</a></li>
+                    <li><a href="#">Check In</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 id="intro"> Where Nature's</h1>
+        <h1 id="intro"> Beauty Awaits</h1>
+        <h1 id="intro"> Your Discovery</h1>
+        <button id="booknow">Book Now</button>
+
+        <div id="destination">
+            <form>
+                <div class="form-group">
+                    <label for="from">From:</label>
+                    <br>
+                    <input type="text" id="from" name="from">
+                </div>
+                <div class="form-group">
+                    <label for="to">To:</label>
+                    <br>
+                    <input type="text" id="to" name="to">
+                </div>
+                <div class="form-group">
+                    <label for="departure-date">Departure:</label>
+                    <br>
+                    <input type="date" id="departure-date" name="departure-date">
+                </div>
+                <div class="form-group">
+                    <label for="return-date">Return:</label>
+                    <br>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Passengers:</label>
+                    <br>
+                    <select id="passengers" name="passengers">
+                        <option value="0">Select</option>
+                        <option value="1">1 Adult</option>
+                        <option value="2">1 Adult, 1 Child</option>
+                        <option value="3">1 Adult, 2 Children</option>
+                        <option value="4">2 Adults</option>
+                        <option value="5">2 Adults, 1 Child</option>
+                        <option value="6">2 Adults, 2 Children</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <div class="popular-picks">
+        <h3>Discover Popular</h3>
+        <h3>Destinations</h3>
+    </div>
+</body>
+
+</html>
