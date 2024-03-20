@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Page</title>
+    <link rel="stylesheet" href="flight.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Departure</h1>
+        <div id="flight-info"></div> <!-- Container to display flight info -->
+    </header>
+    <main>
+        <section class="flight">
+            <h2>Flight 1</h2>
+            <pre>8:00PM - 10:00PM</pre>
+            <pre><strong>Nonstop</strong></pre>
+            <pre><strong>Duration:</strong> 3 hours</pre>
+            <p><Strong>Business</Strong>$840</p>
+            <p><Strong>Comfort</Strong>$520</p>
+            <p><Strong>Economy</Strong>$350</p>
+            <button id="submit" class="button">Select</button>
+        </section>
+
+        <section class="flight">
+            <h2>Flight 2</h2>
+            <pre>8:00PM - 10:00PM</pre>
+            <pre><strong>Nonstop</strong></pre>
+            <pre><strong>Duration:</strong> 3 hours</pre>
+            <p><Strong>Business</Strong>$840</p>
+            <p><Strong>Comfort</Strong>$520</p>
+            <p><Strong>Economy</Strong>$350</p>
+            <button id="submit" class="button">Select</button>
+        </section>
+
+        <section class="flight">
+            <h2>Flight 3</h2>
+            <pre>8:00PM - 10:00PM</pre>
+            <pre><strong>Nonstop</strong></pre>
+            <pre><strong>Duration:</strong> 3 hours</pre>
+            <p><Strong>Business</Strong>$840</p>
+            <p><Strong>Comfort</Strong>$520</p>
+            <p><Strong>Economy</Strong>$350</p>
+            <button id="submit" class="button">Select</button>
+        </section>
+
+        <section class="flight">
+            <h2>Flight 4</h2>
+            <pre>8:00PM - 10:00PM</pre>
+            <pre><strong>Nonstop</strong></pre>
+            <pre><strong>Duration:</strong> 3 hours</pre>
+            <p><Strong>Business</Strong>$840</p>
+            <p><Strong>Comfort</Strong>$520</p>
+            <p><Strong>Economy</Strong>$350</p>
+            <button id="submit" class="button">Select</button>
+        </section>
+
+        <section class="flight">
+            <h2>Flight 5</h2>
+            <pre>8:00PM - 10:00PM</pre>
+            <pre><strong>Nonstop</strong></pre>
+            <pre><strong>Duration:</strong> 3 hours</pre>
+            <p><Strong>Business</Strong>$840</p>
+            <p><Strong>Comfort</Strong>$520</p>
+            <p><Strong>Economy</Strong>$350</p>
+            <button id="submit" class="button">Select</button>
+        </section>
+
+        <section class="flight">
+            <h2>Flight 6</h2>
+            <pre>8:00PM - 10:00PM</pre>
+            <pre><strong>Nonstop</strong></pre>
+            <pre><strong>Duration:</strong> 3 hours</pre>
+            <p><Strong>Business</Strong>$840</p>
+            <p><Strong>Comfort</Strong>$520</p>
+            <p><Strong>Economy</Strong>$350</p>
+            <button id="submit" class="button">Select</button>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Extract query parameters
+            const params = new URLSearchParams(window.location.search);
+            const from = params.get('from');
+            const to = params.get('to');
+            const departureDate = params.get('departure-date');
+
+            // Display flight info at the top of the page
+            const flightInfoContainer = document.getElementById('flight-info');
+            flightInfoContainer.innerHTML = `
+                <p><strong>From:</strong> ${from}</p>
+                <p><strong>Departure Date:</strong> ${departureDate}</p>
+            `;
+
+            // Add event listeners to "Select" buttons
+            const selectButtons = document.querySelectorAll('.button');
+            selectButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Redirect user to return.html with query parameters
+                    window.location.href = `return.html?from=${from}&to=${to}&departure-date=${departureDate}`;
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    background-image: url('images/Homescreen.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+body {
+    background-color: #0b0b0b;
+}
+
+header {
+    padding: 1rem;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #b4a9a9;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+#intro {
+    font-size: 56px;
+    color: white;
+    text-align: left;
+    margin-left: 80px;
+}
+
+#booknow {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-left: 130px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background: radial-gradient(circle at top, rgba(153, 255, 140, 1) 0%, rgba(67, 217, 172, 1) 100%);
+}
+
+#destination {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Add this CSS to style the submit button */
+#destination form button[type="submit"] {
+    display: inline-block;
+    margin: 60px 30px 20px;
+    /* Adjust margin to raise the button up */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: radial-gradient(circle at top, rgba(153, 255, 140, 1) 0%, rgba(67, 217, 172, 1) 100%);
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add hover effect */
+#destination form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add focus effect */
+#destination form button[type="submit"]:focus {
+    outline: none;
+}
+
+#destination form .form-group {
+    display: inline-block;
+    vertical-align: top;
+    /* Align form groups vertically */
+    margin-right: 20px;
+    /* Add spacing between form groups */
+}
+
+.form-group {
+    display: inline-block;
+    margin: 50px 10px;
+    /* Add some spacing between form-group elements */
+    border-radius: 10px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflow content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Box shadow for a cool effect */
+}
+
+.form-group label {
+    color: #676767;
+    font-size: 24px;
+}
+
+.form-group,
+.form-group button {
+    display: inline-block;
+    margin: 50px 10px;
+    /* Add some spacing between form-group elements */
+    border-radius: 10px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflow content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Box shadow for a cool effect */
+    background: linear-gradient(to bottom right, #282828, #151515);
+    /* Gradient background */
+}
+
+.form-group input,
+.form-group select,
+.form-group button {
+    border: none;
+    background-color: transparent;
+    /* Transparent background */
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    /* Padding for spacing */
+    width: 100%;
+    /* Take full width */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width */
+    outline: none;
+    /* Remove default focus outline */
+}
+
+/* Hover effect */
+.form-group:hover {
+    transform: translateY(-2px);
+    /* Move the box slightly upwards on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increase box shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition effect */
+}
+
+/* Input focus effect */
+.form-group input:focus,
+.form-group select:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background on focus */
+}
+
+.popular-picks {
+    color: white;
+    font-size: 36px;
+}
+
+.places button {
+    font-size: 20px;
+    font-weight: 600;
+    color: #676767;
+    margin-left: -50px;
+    margin-top: -50px;
+    border: none;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+}
+
+.places button:focus {
+    background: radial-gradient(circle at top, rgba(153, 255, 140, 1) 0%, rgba(67, 217, 172, 1) 100%);
+    /* Change the background color when the button is focused */
+    outline: none;
+    /* Remove the default focus outline */
+}
+
+.places {
+    display: flex;
+    font-size: 18px;
+    justify-content: space-around;
+}
+
+/* Add this CSS to style the selected button */
+.places button.selected {
+    background: radial-gradient(circle at top, rgba(153, 255, 140, 1) 0%, rgba(67, 217, 172, 1) 100%);
+    /* Change the background color of the selected button */
+    color: rgb(0, 0, 0);
+}
+
+.places button.selected:hover {
+    /* Adjust hover effect for selected button */
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.popular-picks img {
+    width: 200px;
+    /* Adjust the width as needed */
+    height: 200px;
+    /* Adjust the height as needed */
+    border-radius: 10px;
+    /* Add curved corners */
+    margin: 50px;
+    /* Add margin between images */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.container {
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    /* Apply animation */
+}
+
+.overlay {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: bottom;
+    font-size: 20px;
+}
+
+.blog-item {
+    padding: 10px;
+    margin-bottom: -40px;
+    text-align: left;
+    display: flex;
+    margin-left: -50px;
+}
+
+.blog-item img {
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.blog-title .pod-title {
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.blog-description,
+.pod-description {
+    margin-top: -15px;
+    font-size: 18px;
+    /* Add margin between title and description */
+}
+
+.circle {
+    height: 300px;
+    width: 300px;
+    border: 1px;
+    background-color: #99FF8C;
+    border-radius: 50%;
+    margin-left: 980px;
+    margin-top: -400px;
+}
+
+
+
+/* Styles for the "Read More" link */
+.read-more {
+    font-size: 14px;
+    /* Adjusted font size for the "Read More" link */
+    color: #99FF8C;
+    margin-top: -5px;
+
+    /* Adjusted margin for the "Read More" link */
+}
+
+.circle img {
+    height: 400px;
+    width: 300px;
+    margin-top: -75px;
+    margin-left: -20px;
+}
+
+.testimony {
+    color: white;
+}
+
+.testimonial {
+    position: relative;
+    margin-top: 200px;
+}
+
+.testimonial img.colored-image {
+    width: 800px;
+    height: 400px;
+    margin-left: 700px;
+}
+
+.testimonial .image-overlay {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    margin-left: 700px;
+    background-color: rgb(255, 255, 255);
+    /* Change the color as desired */
+    mix-blend-mode: multiply;
+    /* Blend mode to multiply the color with the image */
+}
+
+.testimony {
+    color: white;
+    margin-top: -400px;
+    margin-left: 90px;
+}
+
+.praise {
+    font-size: 24px;
+    text-align: center;
+    background: linear-gradient(to right, rgba(156, 160, 155), rgba(67, 217, 172));
+    /* Linear gradient background with the specified colors */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(171, 171, 171, 0.1);
+    width: 300px;
+    height: 130px;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
