@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Trigger the showImages function with 'popular' category when the page loads
+    showImages('popular');
+
+    // Highlight the 'Popular' button
+    const popularButton = document.querySelector('.places button:nth-child(1)');
+    popularButton.classList.add('selected');
+});
+
 function showImages(category) {
     const imagesContainer = document.getElementById('images-container');
     imagesContainer.innerHTML = ''; // Clear previous images
@@ -7,66 +16,66 @@ function showImages(category) {
     switch (category) {
         case 'popular':
             imageData = [
-                { src: 'images/athens.jpg', text: 'Athens, Greece' },
-                { src: 'images/paris.jpg', text: 'Paris, France' },
-                { src: 'images/dubai.jpg', text: 'Dubai, Emirates' },
-                { src: 'images/atlanta.jpg', text: 'Atlanta, Georgia' },
-                { src: 'images/thailand.jpg', text: 'Bangkok, Thailand' }
+                { src: 'images/athens.jpg', city: 'Athens', country: 'Greece' },
+                { src: 'images/paris.jpg', city: 'Paris', country: 'France' },
+                { src: 'images/dubai.jpg', city: 'Dubai', country: 'Emirates' },
+                { src: 'images/atlanta.jpg', city: 'Atlanta', country: ' Georgia' },
+                { src: 'images/thailand.jpg', city: 'Bangkok', country: ' Thailand' }
             ];
             break;
         case 'united-states':
             imageData = [
-                { src: 'images/newyork.jpg', text: 'New York, New York' },
-                { src: 'images/washington.jpg', text: 'Washington, D.C.' },
-                { src: 'images/la.jpg', text: 'Los Angeles, California' },
-                { src: 'images/houston.jpg', text: 'Houston, Texas' },
-                { src: 'images/atlanta.jpg', text: 'Atlanta, Georgia' }
+                { src: 'images/newyork.jpg', city: 'New York', country: ' New York' },
+                { src: 'images/washington.jpg', city: 'Washington', country: ' D.C.' },
+                { src: 'images/la.jpg', city: 'Los Angeles', country: ' California' },
+                { src: 'images/houston.jpg', city: 'Houston', country: ' Texas' },
+                { src: 'images/atlanta.jpg', city: 'Atlanta', country: ' Georgia' }
             ];
             break;
         case 'europe':
             imageData = [
-                { src: 'images/rome.jpg', text: 'Rome, Italy' },
-                { src: 'images/paris.jpg', text: 'Paris, France' },
-                { src: 'images/london.jpg', text: 'London, United Kingdom' },
-                { src: 'images/barcelona.jpg', text: 'Barcelona, Spain' },
-                { src: 'images/netherlands.jpg', text: 'Netherlands, Amsterdamn' }
+                { src: 'images/rome.jpg', city: 'Rome', country: ' Italy' },
+                { src: 'images/paris.jpg', city: 'Paris', country: ' France' },
+                { src: 'images/london.jpg', city: 'London', country: ' United Kingdom' },
+                { src: 'images/barcelona.jpg', city: 'Barcelona', country: ' Spain' },
+                { src: 'images/netherlands.jpg', city: 'Netherlands', country: ' Amsterdamn' }
             ];
             break;
         case 'asia':
             imageData = [
-                { src: 'images/tokyo.jpg', text: 'Tokyo, Japan' },
-                { src: 'images/thailand.jpg', text: 'Bangkok, Thailand' },
-                { src: 'images/dubai.jpg', text: 'Dubai, Emirates' },
-                { src: 'images/seoul.jpg', text: 'Sol, South Korea' },
-                { src: 'images/beijing.jpg', text: 'Beijing, China' }
+                { src: 'images/tokyo.jpg', city: 'Tokyo', country: ' Japan' },
+                { src: 'images/thailand.jpg', city: 'Bangkok', country: ' Thailand' },
+                { src: 'images/dubai.jpg', city: 'Dubai', country: ' Emirates' },
+                { src: 'images/seoul.jpg', city: 'Sol', country: ' South Korea' },
+                { src: 'images/beijing.jpg', city: 'Beijing', country: ' China' }
             ];
             break;
         case 'africa':
             imageData = [
-                { src: 'images/harare.jpg', text: 'Harare, Zimbabwe' },
-                { src: 'images/nairobi.jpg', text: 'Nairobi, Kenya' },
-                { src: 'images/capetown.jpg', text: 'Capetown, South Africa' },
-                { src: 'images/lagos.jpg', text: 'Lagos, Nigeria' },
-                { src: 'images/agadir.jpg', text: 'Agadir, Morocco' }
+                { src: 'images/harare.jpg', city: 'Harare', country: ' Zimbabwe' },
+                { src: 'images/nairobi.jpg', city: 'Nairobi', country: ' Kenya' },
+                { src: 'images/capetown.jpg', city: 'Capetown', country: ' South Africa' },
+                { src: 'images/lagos.jpg', city: 'Lagos', country: ' Nigeria' },
+                { src: 'images/agadir.jpg', city: 'Agadir', country: ' Morocco' }
             ];
             break;
         case 'south-america':
             imageData = [
-                { src: 'images/rio.jpg', text: 'Rio, Brazil' },
-                { src: 'images/cusco.jpg', text: 'Cusco, Peru' },
-                { src: 'images/santiago.jpg', text: 'Santiago, Chile' },
-                { src: 'images/cancun.jpg', text: 'Cancun, Mexico' },
-                { src: 'images/sao.jpg', text: 'Sao Paulo, Brazil' }
+                { src: 'images/rio.jpg', city: 'Rio', country: ' Brazil' },
+                { src: 'images/cusco.jpg', city: 'Cusco', country: ' Peru' },
+                { src: 'images/santiago.jpg', city: 'Santiago', country: ' Chile' },
+                { src: 'images/cancun.jpg', city: 'Cancun', country: ' Mexico' },
+                { src: 'images/sao.jpg', city: 'Sao Paulo', country: ' Brazil' }
             ];
             break;
 
         case 'australia':
             imageData = [
-                { src: 'images/perth.jpg', text: 'Perth, Australia' },
-                { src: 'images/melbourne.jpg', text: 'Melbourne, Victoria' },
-                { src: 'images/sydney.jpg', text: 'Sydney, Australia' },
-                { src: 'images/cairns.jpg', text: 'Cairns, Queensland' },
-                { src: 'images/adelaide.jpg', text: 'Adelaide, Australia' }
+                { src: 'images/perth.jpg', city: 'Perth', country: ' Australia' },
+                { src: 'images/melbourne.jpg', city: 'Melbourne', country: ' Victoria' },
+                { src: 'images/sydney.jpg', city: 'Sydney', country: ' Australia' },
+                { src: 'images/cairns.jpg', city: 'Cairns', country: ' Queensland' },
+                { src: 'images/adelaide.jpg', city: 'Adelaide', country: ' Australia' }
             ];
             break;
         default:
@@ -82,12 +91,24 @@ function showImages(category) {
 
         const overlay = document.createElement('div');
         overlay.classList.add('overlay');
-        overlay.textContent = data.text;
+
+        // Construct the overlay text with city and country
+        overlay.innerHTML = `<div class="city">${data.city}</div><div class="country">${data.country}</div>`;
 
         container.appendChild(img);
         container.appendChild(overlay);
         imagesContainer.appendChild(container);
     });
+
+    // Remove the 'selected' class from all buttons
+    const buttons = document.querySelectorAll('.places button');
+    buttons.forEach(button => {
+        button.classList.remove('selected');
+    });
+
+    // Add the 'selected' class to the clicked button
+    const selectedButton = document.querySelector(`.places button[data-category="${category}"]`);
+    selectedButton.classList.add('selected');
 
     // Trigger animation after a short delay for smoother effect
     setTimeout(() => {
