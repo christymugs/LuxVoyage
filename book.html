@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Voyage | Book Now</title>
+    <link rel="stylesheet" href="book.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="content">
+            <div class="site-logo">
+                <a href="#" class="logo-link">Lux Voyage</a>
+            </div>
+            <ul class="navigation">
+                <li class="link"><a href="#home">Home</a></li>
+                <li class="link"><a href="#about">About Us</a></li>
+                <li class="link"><a href="#Destinations">Destination</a></li>
+                <li class="link"><a href="#blog">Blog</a></li>
+                <li class="link"><a href="#gallery">Gallery</a></li>
+                <li class="link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <header class="section__container header__container">
+        <ul class="tab__container">
+            <li class="tab__item active" data-tab-target="#flight-tab">Flight</li>
+            <li class="tab__item" data-tab-target="#hotel-tab">Hotel</li>
+            <li class="tab__item" data-tab-target="#car-tab">Cars</li>
+        </ul>
+        <div class="header__image__container">
+            <div class="header__content">
+                <h1>Enjoy your dream vacation</h1>
+                <p>Book Hotels, flights and car packages!</p>
+            </div>
+
+            <div class="booking_container">
+                <form id="flight-tab" class="tab-content active" style="display: block;">
+                    <!-- Flight Tab Content -->
+                    <div class="form-group">
+                        <label for="from">From:</label>
+                        <br>
+                        <input type="text" id="from" name="from" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="to">To:</label>
+                        <br>
+                        <input type="text" id="to" name="to">
+                    </div>
+                    <div class="form-group">
+                        <label for="departure-date">Departure:</label>
+                        <br>
+                        <input type="date" id="departure-date" name="departure-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="return-date">Return:</label>
+                        <br>
+                        <input type="date" id="return-date" name="return-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passengers">Passengers:</label>
+                        <br>
+                        <input type="text" id="passengers" name="passengers">
+                    </div>
+
+                </form>
+                <form id="hotel-tab" class="tab-content" style="display: none;">
+                    <!-- Hotel Tab Content -->
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="text">
+                            <label>Location</label>
+                        </div>
+                        <p>Where are you going?</p>
+                    </div>
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="text">
+                            <label>Check In</label>
+                        </div>
+                        <p>Add Date</p>
+                    </div>
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="text">
+                            <label>Checkout</label>
+                        </div>
+                        <p>Add Date</p>
+                    </div>
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="text">
+                            <label>Guests</label>
+                        </div>
+                        <p>Add Guests</p>
+                    </div>
+                </form>
+                <form id="car-tab" class="tab-content" style="display: none;">
+                    <!-- Car Tab Content -->
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="text">
+                            <label>Location</label>
+                        </div>
+                        <p>Where</p>
+                    </div>
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="date">
+                            <label>From</label>
+                        </div>
+                        <p>Add Date</p>
+                    </div>
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="date">
+                            <label>Until</label>
+                        </div>
+                        <p>Add Date</p>
+                    </div>
+                </form>
+                <button class="btn"><i class="ri-search-line"></i></button>
+            </div>
+        </div>
+    </header>
+    <script>
+        const tabs = document.querySelectorAll('.tab__item');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = document.querySelector(tab.dataset.tabTarget);
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                tabContents.forEach(content => {
+                    if (content === target) {
+                        content.classList.add('active');
+                        content.style.display = 'block';
+                    } else {
+                        content.classList.remove('active');
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
