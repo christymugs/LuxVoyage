@@ -1,55 +1,142 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #000000;
+    /* Dark blue background */
+    color: #fff;
+    /* White text color */
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: rgb(255, 255, 255);
 }
 
-header {
-    color: rgb(94, 94, 94);
-    text-align: center;
-    padding: 20px 0;
+a {
+    text-decoration: none;
 }
 
-h1 {
-    margin: 0;
-}
-
-main {
+.container {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
 }
 
-.flight {
-    border-radius: 5px;
-    padding: 10px;
+h2 {
+    color: #fff;
+    /* White heading text color */
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.destination {
+    color: #b4b4b4;
+    /* White heading text color */
+    font-size: 36px;
+    text-align: center;
+}
+
+.date {
+    color: #b4b4b4;
+    font-size: 24px;
+    text-align: left;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+#info {
     margin-bottom: 20px;
-    background-color: #1E1E1E;
 }
 
-.flight h2 {
-    margin-top: 0;
-    text-align: center;
+#flight-list {
+    /* Removed display: grid; */
 }
 
-.flight p {
-    text-align: right;
-    display: inline;
-    margin-left: 280px;
+.flight-item {
+    margin-bottom: 20px;
 }
 
-
-.button {
+.boarding-pass {
+    background-color: #222;
+    /* Dark gray background */
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: radial-gradient(circle at top, rgba(153, 255, 140, 1) 0%, rgba(67, 217, 172, 1) 100%);
-    color: rgb(0, 0, 0);
-    padding: 12px 30px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Increased shadow intensity */
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Align content to the ends */
+}
+
+.boarding-pass:hover {
+    transform: translateY(-5px);
+}
+
+.passenger-info {
+    flex: 1;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+}
+
+.price {
+    margin-bottom: 5px;
+}
+
+.price-economy,
+.price-business,
+.price-first {
+    color: #fff;
+    /* White text color */
+    border-radius: 10px;
+    padding: 20px;
+    height: 150px;
+    /* Set a larger fixed height for all price boxes */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Increased shadow intensity */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Added animation for transform and background-color */
+    display: flex;
+    flex-direction: column;
+    /* Display flex items vertically */
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+}
+
+.ticket-price {
+    font-size: 36px;
+}
+
+
+.price-economy {
+    background-color: #2f9ee7cc;
     font-size: 20px;
-    font-weight: 600;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    margin-left: 100px;
+    /* Main blue color */
+}
+
+.price-business {
+    background-color: #1e7cbbcc;
+    /* Red color for business */
+    font-size: 20px;
+}
+
+.price-first {
+    background-color: #114a70cc;
+    /* Dark gray color for first class */
+    font-size: 20px;
+}
+
+/* Added hover effect for price boxes */
+.price-economy:hover,
+.price-business:hover,
+.price-first:hover {
+    transform: scale(1.05);
+    /* Scale up the box on hover */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    /* Increase shadow intensity on hover */
 }
