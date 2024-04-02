@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Voyage | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="content">
+            <div class="site-logo">
+                <a href="index.html" class="logo-link">Lux Voyage</a>
+            </div>
+            <ul class="navigation">
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="book.html">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="intro">
+        <div class="contact-form">
+            <form id="contact-form">
+                <h2>Contact us Today!</h2>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name:</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email:</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-open-outline"></ion-icon></span>
+                    <textarea id="message" name="message" required></textarea>
+                    <label for="message">Message:</label>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the user's inputted name
+            var userName = document.getElementById('name').value;
+
+            // Display thank you message with the user's name
+            alert('Thank you for contacting us, ' + userName + '! We will get back to you soon.');
+
+            // Reset form fields
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
