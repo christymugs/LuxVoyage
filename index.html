@@ -16,7 +16,7 @@
                     <a href="index.html" class="logo-link">Lux Voyage</a>
                 </div>
                 <ul class="navigation">
-                    <li class="link"><a href="#home">Home</a></li>
+                    <li class="link"><a href="#">Home</a></li>
                     <li class="link"><a href="#about">About Us</a></li>
                     <li class="link"><a href="#Destinations">Destinations</a></li>
                     <li class="link"><a href="#blog">Blog</a></li>
@@ -24,18 +24,118 @@
                     <li class="link"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-        </nav>
-        <header class="home" id="home">
-            <div class="content">
-                <h1>The <strong>best</strong> way to <strong>plan your next</strong> adventure</h1>
-                <h4>Explore the colorful world like never seen</h4>
-                <a href="book.html" class="btn-explore">
-                    Book Now
-                    <i class="ri-arrow-right-line"></i>
-                </a>
+        </nav><br>
+        <br>
+        <br>
+        <br>
+        <header class="section__container header__container">
+            <ul class="tab__container">
+                <li class="tab__item active" data-tab-target="#flight-tab">Flight</li>
+                <li class="tab__item" data-tab-target="#hotel-tab">Hotel</li>
+                <li class="tab__item" data-tab-target="#car-tab">Cars</li>
+            </ul>
+            <div class="header__image__container">
+                <div class="header__content">
+                    <h1>Enjoy your dream vacation</h1>
+                    <p>Book Hotels, flights and car packages!</p>
+                </div>
 
+                <div class="booking_container">
+                    <form id="flight-tab" class="tab-content active" style="display: block;">
+                        <!-- Flight Tab Content -->
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="text" id="from" name="from" required>
+                                <label for="from">From:</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="text" id="to" name="to">
+                                <label for="to">To:</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="date" id="departure-date" name="departure-date" required>
+                                <label for="departure-date">Departure:</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="date" id="return-date" name="return-date" required>
+                                <label for="return-date">Return:</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="text" id="passengers" name="passengers">
+                                <label for="passengers">Passengers:</label>
+                            </div>
+                        </div>
+                        <button class="btn" id="flightButton"><i class="ri-search-line"></i></button>
+                    </form>
+                    <form id="hotel-tab" class="tab-content" style="display: none;">
+                        <!-- Hotel Tab Content -->
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="text" id="location" name="location" required>
+                                <label for="location">Location:</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="date" id="departure-date" name="departure-date" required>
+                                <label for="from">Check In</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="date" id="return-date" name="return-date" required>
+                                <label for="from">Checkout</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="text" id="guests" name="guests" required>
+                                <label for="guests">Guests</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="text" id="guests" name="guests" required>
+                                <label for="rooms">Rooms</label>
+                            </div>
+                        </div>
+                        <button class="btn" id="hotelButton"><i class="ri-search-line"></i></button>
+                    </form>
+                    <form id="car-tab" class="tab-content" style="display: none;">
+                        <!-- Car Tab Content -->
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="text" id="location" name="location" required>
+                                <label for="from">Location</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="date" id="departure-date" name="departure-date" required>
+                                <label for="from">From</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input__group">
+                                <input type="date" id="return-date" name="return-date" required>
+                                <label for="from">Until</label>
+                            </div>
+                        </div>
+                        <button class="btn" id="carButton"><i class="ri-search-line"></i></button>
+                    </form>
+                </div>
             </div>
         </header>
+        <br>
+        <br>
         <section class="about" id="about">
             <div class="content">
                 <div class="items">
@@ -80,7 +180,6 @@
                 </div>
             </div>
         </section>
-
         <section class="Destinations" id="Destinations">
             <div class="popular-picks">
                 <h2>Discover Popular Destinations</h2>
@@ -94,7 +193,87 @@
                 </div>
                 <div class="images" id='images-container'></div>
         </section>
+        <footer>
+            <div class="footer-section">
+                <div class="footer-content">
+                    <p>Company</p>
+                    <pre>About us
+Careers
+Privacy Policy
+Terms and Conditions</pre>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-content">
+                    <p>Destinations</p>
+                    <pre>United States
+Canada
+Europe
+Asia</pre>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-content">
+                    <p>Support</p>
+                    <pre>Before you Book</pre>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const tabs = document.querySelectorAll('.tab__item');
+                const tabContents = document.querySelectorAll('.tab-content');
+
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const target = document.querySelector(tab.dataset.tabTarget);
+                        tabs.forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+                        tabContents.forEach(content => {
+                            if (content === target) {
+                                content.classList.add('active');
+                                content.style.display = 'block';
+                            } else {
+                                content.classList.remove('active');
+                                content.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+
+                const flightForm = document.getElementById('flight-tab');
+                const hotelForm = document.getElementById('hotel-tab');
+                const carForm = document.getElementById('car-tab');
+
+                function handleFormSubmit(event, form) {
+                    event.preventDefault();
+                    const formData = new FormData(form);
+                    const urlParams = new URLSearchParams();
+                    for (const pair of formData) {
+                        urlParams.append(pair[0], pair[1]);
+                    }
+                    window.location.href = `return.html?${urlParams.toString()}`;
+                }
+
+                flightForm.addEventListener('submit', function (event) {
+                    handleFormSubmit(event, flightForm);
+                });
+
+                hotelForm.addEventListener('submit', function (event) {
+                    handleFormSubmit(event, hotelForm);
+                });
+
+                carForm.addEventListener('submit', function (event) {
+                    handleFormSubmit(event, carForm);
+                });
+            });
+        </script>
+
+
+
     </body>
+    <script src="book.js"></script>
     <script src="script.js"></script>
 
     </html>
