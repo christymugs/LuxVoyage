@@ -10,57 +10,75 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="info">
-            <h2>Return <i class="ri-flight-takeoff-line"></i></h2>
-            <div class="destination">
-                <span id="to"></span> <i class="ri-arrow-right-s-fill"></i><span id="from"></span></p>
-            </div>
-        </div>
-        <div id="flight-list">
-            <!--list of flights here -->
-            <div class="flight-item">
-                <div class="boarding-pass">
-                    <div class="passenger-info">
-                        <h3>Flight 1: </h3>
-                        <p class="time">9:00 <i class="ri-arrow-right-line"></i> 10:00pm</p>
-                        <p>nonstop</p>
-                    </div>
-                    <div class="prices"></div>
-                    <a href="total.html">
-                        <div class="price-economy" onclick="handleTicketSelection('Economy', 500)"
-                            data-ticket-type="Economy">
-                            Economy:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                    <a href="total.html">
-                        <div class="price-business" onclick="handleTicketSelection('Business', 500)"
-                            data-ticket-type="Business">
-                            Business:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                    <a href="total.html">
-                        <div class="price-first" onclick="handleTicketSelection('First Class', 500)"
-                            data-ticket-type="First Class">
-                            First Class:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
+    <header>
+        <nav class="nav-bar">
+            <div class="content">
+                <div class="site-logo">
+                    <a href="index.html" class="logo-link">Lux Voyage</a>
                 </div>
+                <div class="info">
+                    <div class="destination">
+                        <span id="to"></span> <i class="ri-arrow-right-s-fill"></i><span id="from"></span>
+                    </div>
+                    <div class="date" id="date"> <!-- Add this div for return date -->
+                        <p><span id="return-date"></span></p>
+                    </div>
+                    <div class="passengers">
+                        <p><span id="passengers"></span><strong> Passengers </strong></p>
+                    </div>
+                </div>
+                <ul class="navigation">
+                    <li class="link"><a href="index.html">Home</a></li>
+                    <li class="link"><a href="#blog">Blog</a></li>
+                    <li class="link"><a href="contact.html">Contact</a></li>
+                    <li class="link"><a href="book.html">My account</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="flight-list">
+        <!-- Your list of flights here -->
+        <div class="flight-item">
+            <div class="boarding-pass">
+                <div class="passenger-info">
+                    <h3>Flight 1: </h3>
+                    <p class="time">9:00 <i class="ri-arrow-right-line"></i> 10:00pm</p>
+                    <p>nonstop</p>
+                </div>
+                <div class="prices"></div>
+                <a href="total.html">
+                    <div class="price-economy" onclick="handleTicketSelection('Economy', 500)"
+                        data-ticket-type="Economy">
+                        Economy:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
+                <a href="total.html">
+                    <div class="price-business" onclick="handleTicketSelection('Business', 500)"
+                        data-ticket-type="Business">
+                        Business:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
+                <a href="total.html">
+                    <div class="price-first" onclick="handleTicketSelection('First Class', 500)"
+                        data-ticket-type="First Class">
+                        First Class:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="flight-item">
             <div class="boarding-pass">
                 <div class="passenger-info">
-                    <h3>Flight 1: </h3>
+                    <h3>Flight 2: </h3>
                     <p class="time">9:00 <i class="ri-arrow-right-line"></i> 10:00pm</p>
                     <p>nonstop</p>
                 </div>
@@ -91,7 +109,7 @@
         <div class="flight-item">
             <div class="boarding-pass">
                 <div class="passenger-info">
-                    <h3>Flight 1: </h3>
+                    <h3>Flight 3: </h3>
                     <p class="time">9:00 <i class="ri-arrow-right-line"></i> 10:00pm</p>
                     <p>nonstop</p>
                 </div>
@@ -119,10 +137,9 @@
                 </a>
             </div>
         </div>
+        <!-- Add more flight items as needed -->
     </div>
 
-    <!-- Add more flight items as needed -->
-    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
