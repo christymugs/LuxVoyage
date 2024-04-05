@@ -10,120 +10,132 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="info">
-            <h2>Outbound <i class="ri-flight-takeoff-line"></i></h2>
-            <div class="destination">
-                <span id="from"></span> <i class="ri-arrow-right-s-fill"></i><span id="to"></span></p>
-            </div>
-            <div class="passengers">
-                <p><strong>Passengers:</strong> <span id="passengers"></span></p>
-            </div>
-            <div class="date">
-                <p><strong>Departure Date:</strong> <span id="departure-date"></span></p>
-            </div>
-        </div>
-        <div id="flight-list">
-            <!-- Your list of flights here -->
-            <div class="flight-item">
-                <div class="boarding-pass">
-                    <div class="passenger-info">
-                        <h3>Flight 1: </h3>
-                        <p class="time">9:00 <i class="ri-arrow-right-line"></i> 10:00pm</p>
-                        <p>nonstop</p>
+    <header>
+        <nav class="nav-bar">
+            <div class="content">
+                <div class="site-logo">
+                    <a href="index.html" class="logo-link">Lux Voyage</a>
+                </div>
+                <div class="info">
+                    <div class="destination">
+                        <span id="from"></span> <i class="ri-arrow-right-s-fill"></i><span id="to"></span></p>
                     </div>
-                    <div class="prices"></div>
-                    <a href="return.html">
-                        <div class="price-economy">Economy:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                    <a href="return.html">
-                        <div class="price-business">Business:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                    <a href="return.html">
-                        <div class="price-first">First Class:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
+                    <div class="date" id="date">
+                        <p><span id="departure-date"></span></p>
+                    </div>
+                    <div class="passengers">
+                        <p><span id="passengers"></span><strong> Passengers </strong></p>
+                    </div>
                 </div>
+                <ul class="navigation">
+                    <li class="link"><a href="index.html">Home</a></li>
+                    <li class="link"><a href="#blog">Blog</a></li>
+                    <li class="link"><a href="contact.html">Contact</a></li>
+                    <li class="link"><a href="book.html">My account</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
+    </header>
+    <div id="flight-list">
+        <!-- Your list of flights here -->
         <div class="flight-item">
+            <p style="font-size: 48px; color: black;">Outbound <i class="ri-flight-takeoff-line"></i></p>
             <div class="boarding-pass">
                 <div class="passenger-info">
-                    <h3>Flight 3: </h3>
+                    <h3>Flight 1: </h3>
                     <p class="time">9:00 <i class="ri-arrow-right-line"></i> 10:00pm</p>
                     <p>nonstop</p>
                 </div>
-                <div class="prices">
-                    <a href="return.html">
-                        <div class="price-economy">Economy:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                    <a href="return.html">
-                        <div class="price-business">Business:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                    <a href="return.html">
-                        <div class="price-first">First Class:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                </div>
+                <div class="prices"></div>
+                <a href="return.html">
+                    <div class="price-economy">Economy:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
+                <a href="return.html">
+                    <div class="price-business">Business:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
+                <a href="return.html">
+                    <div class="price-first">First Class:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="flight-item">
-            <div class="boarding-pass">
-                <div class="passenger-info">
-                    <h3>Flight 3: </h3>
-                    <p class="time">9:00 <i class="ri-arrow-right-line"></i> 10:00pm</p>
-                    <p>nonstop</p>
-                </div>
-                <div class="prices">
-                    <a href="return.html">
-                        <div class="price-economy">Economy:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                    <a href="return.html">
-                        <div class="price-business">Business:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                    <a href="return.html">
-                        <div class="price-first">First Class:
-                            <p class="ticket-price">500</p>
-                            <p class="per">Per passenger</p>
-                            <i class="ri-corner-down-right-line"></i>
-                        </div>
-                    </a>
-                </div>
+    </div>
+    <div class="flight-item">
+        <div class="boarding-pass">
+            <div class="passenger-info">
+                <h3>Flight 2: </h3>
+                <p class="time">9:00 <i class="ri-arrow-right-line"></i> 10:00pm</p>
+                <p>nonstop</p>
+            </div>
+            <div class="prices">
+                <a href="return.html">
+                    <div class="price-economy">Economy:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
+                <a href="return.html">
+                    <div class="price-business">Business:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
+                <a href="return.html">
+                    <div class="price-first">First Class:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
             </div>
         </div>
-        <!-- Add more flight items as needed -->
     </div>
+    <div class="flight-item">
+        <div class="boarding-pass">
+            <div class="passenger-info">
+                <h3>Flight 3: </h3>
+                <p class="time">9:00 <i class="ri-arrow-right-line"></i> 10:00pm</p>
+                <p>nonstop</p>
+            </div>
+            <div class="prices">
+                <a href="return.html">
+                    <div class="price-economy">Economy:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
+                <a href="return.html">
+                    <div class="price-business">Business:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
+                <a href="return.html">
+                    <div class="price-first">First Class:
+                        <p class="ticket-price">500</p>
+                        <p class="per">Per passenger</p>
+                        <i class="ri-corner-down-right-line"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
+    <!-- Add more flight items as needed -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -159,6 +171,14 @@
             localStorage.setItem('selectedTicketType', ticketType);
             localStorage.setItem('selectedTicketPrice', price);
         }
+        document.addEventListener('DOMContentLoaded', function () {
+            const dateElement = document.getElementById('date');
+            const options = { month: 'long', day: 'numeric' };
+            const today = new Date();
+            const formattedDate = today.toLocaleDateString('en-US', options);
+            dateElement.textContent = formattedDate;
+        });
+
     </script>
 </body>
 <script src="flight.js"></script>
