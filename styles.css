@@ -1,21 +1,25 @@
 :root {
-    --primary-color: #00040b;
-    --primary-light: #a0b3e5;
-    --blue-color: #114a70cc;
+    --primary-color: #417749;
+    --main-color: #435681;
+    --text-dark: #333333;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+    --white: #ffffff;
+    --max-width: 1200px;
 }
 
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Veranda', sans-serif;
     text-decoration: none;
+
 }
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #00040b;
-    color: #eee;
+    background-color: #ffffff;
 }
 
 h1,
@@ -31,8 +35,8 @@ h4 {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: transparent;
-    box-shadow: 1px 1px 2px #114a70cc;
+    background-color: #06294D;
+    box-shadow: 1px 1px 2px #417749;
 }
 
 .content {
@@ -54,11 +58,12 @@ h4 {
 
 .nav-bar .site-logo .logo-link {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 26px;
+    /* Adjusted from 22px */
     line-height: 22px;
     text-transform: capitalize;
     color: #fff;
-    border-top: 3px solid #114a70cc;
+    border-top: 3px solid #417749;
 }
 
 .nav-bar .navigation {
@@ -79,71 +84,32 @@ h4 {
 }
 
 .nav-bar .navigation .link:hover a {
-    color: #114a70cc;
-    border-top: 1px solid #114a70cc;
+    color: #417749;
+    border-top: 1px solid #417749;
 }
 
-.home {
-    background: linear-gradient(to top, #00040b, #00040bbb), url(images/header.jpg);
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: cover;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.home .content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-}
-
-.home .content h1 {
-    font-size: 46px;
-    line-height: 58px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-weight: 500;
-    background-color: url(images/header.jpg);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 1px #fff;
-    max-width: 450px;
-}
-
-.home .content h4 {
-    font-size: 26px;
-    line-height: 26px;
-    font-weight: 300;
-    color: #666666;
-}
 
 .btn-explore {
     width: fit-content;
-    background-color: #114a70cc;
+    background-color: #417749;
     padding: .9rem 2.4rem;
     padding-left: 1rem;
     font-size: 16px;
     line-height: 16px;
-    color: #eee;
-    border: 2px solid #114a70cc;
+    color: #06294D;
+    border: 2px solid #417749;
     margin-top: 2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 1rem;
     transition: all 1s;
+    text-transform: uppercase;
 }
 
 .btn-explore:hover {
-    border: 2px solid #114a70cc;
-    background-color: #114a70cc;
+    border: 2px solid #2c5032;
+    background-color: #2a4a2f;
     padding-left: 2rem;
 }
 
@@ -217,7 +183,8 @@ section .heading .subtitle {
 .about .items .item .about-title {
     font-size: 46px;
     font-weight: 500;
-    color: #fff;
+    color: #06294D;
+    text-transform: uppercase;
 }
 
 .about .items .item .about-desc {
@@ -229,7 +196,8 @@ section .heading .subtitle {
 .about .items .item .about-desc p {
     font-size: 16px;
     line-height: 24px;
-    color: #eee;
+    color: #000000;
+
 }
 
 .about .item-data {
@@ -254,18 +222,20 @@ section .heading .subtitle {
 
 .about .item-data .col:hover {
     background-color: #00000077;
-    border-top: 6px solid #fff;
+    border-top: 6px solid #417749;
 }
 
 .about .item-data .col h1 {
     text-align: center;
     font-size: 38px;
+    color: #06294D;
 }
 
 .about .item-data .col span {
     text-align: center;
     font-size: 16px;
     font-weight: 300;
+    text-transform: uppercase;
 }
 
 .next {
@@ -278,21 +248,22 @@ section .heading .subtitle {
     gap: 2rem;
 }
 
-.popular-picks {
-    color: white;
-    font-size: 36px;
+.popular-picks h2 {
+    color: #06294D;
+    font-size: 46px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: -200px;
+    text-transform: uppercase;
 }
 
 .places button {
     max-width: 100%;
     width: 100px;
-    height: 50px;
+    height: 60px;
     font-size: 20px;
     font-weight: 600;
     color: #ffffff;
-    margin-top: -50px;
+    margin-top: 120px;
     border: none;
     background-color: #1E1E1E;
     border-radius: 5px;
@@ -300,45 +271,37 @@ section .heading .subtitle {
 
 .places button:focus {
     background: radial-gradient(circle at top, #2e90d1cc 0%, #114a70cc 100%);
-    /* Change the background color when the button is focused */
     outline: none;
-    /* Remove the default focus outline */
 }
 
 .places {
     display: flex;
     font-size: 18px;
     justify-content: space-around;
-    margin-top: 200px;
 }
 
-/* Add this CSS to style the selected button */
 .places button.selected {
     background: radial-gradient(circle at top, rgba(153, 255, 140, 1) 0%, rgba(67, 217, 172, 1) 100%);
-    /* Change the background color of the selected button */
     color: rgb(255, 255, 255);
 }
 
 .places button.selected:hover {
-    /* Adjust hover effect for selected button */
     transform: translateY(0);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(29, 30, 76, 0.1);
 }
 
 .images {
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    z-index: -2;
+    position: relative;
 }
 
 .popular-picks img {
     width: 200px;
-    /* Adjust the width as needed */
     height: 200px;
-    /* Adjust the height as needed */
     border-radius: 10px;
-    /* Add curved corners */
-    margin: 50px;
-    /* Add margin between images */
+    margin: 40px;
 }
 
 @keyframes fadeIn {
@@ -353,12 +316,10 @@ section .heading .subtitle {
     }
 }
 
-
 .container {
     position: relative;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
-    /* Apply animation */
 }
 
 .overlay {
@@ -368,34 +329,26 @@ section .heading .subtitle {
     width: 100%;
     padding: 20px;
     z-index: 2;
-    /* Ensure the overlay is above the image */
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
     box-sizing: border-box;
     color: white;
     text-align: center;
     font-size: 24px;
 }
 
-.city {
+.city,
+.country {
     font-size: 36px;
     position: relative;
     z-index: 3;
-    /* Ensure the text is above the overlay */
 }
 
 .country {
-    font-size: 18px;
-    font-style: italic;
-    position: relative;
-    z-index: 3;
-    /* Ensure the text is above the overlay */
+    color: #000000cf;
 }
 
-/* Add a gradient overlay to darken the bottom part of the image */
 .container img {
     position: relative;
     z-index: 1;
-    /* Ensure the image is below the overlay and text */
 }
 
 .container::after {
@@ -405,9 +358,6 @@ section .heading .subtitle {
     left: 0;
     width: 100%;
     height: 40%;
-    /* Adjust the height of the darkened area as needed */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.918), transparent);
-    /* Adjust the gradient colors as needed */
     z-index: 2;
 }
 
@@ -465,18 +415,7 @@ section .heading .subtitle {
     top: -5px;
 }
 
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: white;
-    font-size: 1em;
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-}
-
+.input-box input,
 .input-box textarea {
     width: 100%;
     height: 100%;
@@ -498,65 +437,229 @@ section .heading .subtitle {
 }
 
 .btn {
-    width: 100%;
-    height: 45px;
-    background: #323846;
-    border: none;
+    padding: 1rem;
     outline: none;
-    border-radius: 6px;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
     cursor: pointer;
-    font-size: 1em;
-    color: white;
-    font-weight: 500px;
+    transition: .3s;
 }
 
 .btn:hover {
-    background: #93a1c2;
+    background: #203522;
     transition: .5s;
 }
 
-.input-box {
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section__header {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.header__content {
+    color: var(--white);
+    margin: 50px;
+    text-align: left;
+    font-size: 36px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+#info {
+    display: inline-block;
+}
+
+h2 {
+    text-align: center;
+}
+
+.header__container {
+    padding: 1rem 1rem 5rem 1rem;
+}
+
+.header__image__container {
     position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid whitesmoke;
-    margin: 30px 0;
-
+    min-height: 500px;
+    background-image: linear-gradient(to right, rgba(44, 56, 85, 0.9),
+            rgba(100, 125, 187, 0.1)),
+        url("images/book.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
 }
 
-.input-box label {
+.tab__container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.tab__item {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.tab__item.active {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.booking_container {
+    color: var(--text-dark);
     position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: white;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 6rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, .7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .1);
+
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label {
-    top: -5px;
+.booking_container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
+.booking_container .btn {
+    padding: 1rem;
     outline: none;
-    font-size: 1em;
-    color: white;
-    font-weight: 600px;
-    padding: 0 35px 0 5px;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .3s;
 }
 
-.input-box .icon {
+.booking_container .btn:hover {
+    background-color: #60b56c;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.input__group {
+    position: relative;
+    width: 80%;
+    padding: 0.5rem;
+}
+
+.input__group input {
+    width: 80%;
+    padding: .28rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #417749;
+    background-color: transparent;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    color: #333;
+}
+
+.input__group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scaleX(1.1);
+}
+
+.input__group label {
     position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    color: white;
-    line-height: 57px;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    color: #888;
+    transform: translateY(2rem);
+    transition: transform 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+}
+
+.input__group input:focus+label,
+.input__group input:not(:placeholder-shown)+label {
+    transform: translateY(-1.5rem);
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input__group input::placeholder {
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+.input__group input:focus::placeholder,
+.input__group input:not(:placeholder-shown)::placeholder {
+    color: #999;
+}
+
+footer {
+    background-color: #06294D;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-section {
+    margin: 0 50px;
+    /* Adjust margin as needed */
+    height: 300px;
+    /* Adjust height as needed */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section p {
+    font-weight: 300;
+    font-size: 46px;
+    margin-bottom: 10px;
+    /* Adjust as needed */
+    color: #417749;
+}
+
+.footer-section pre {
+    white-space: pre-wrap;
+    /* Allow wrapping within <pre> element */
+    font-size: 16px;
+    /* Adjust as needed */
+    color: #fff;
+    /* Adjust color as needed */
 }
