@@ -1,9 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #000000;
-    /* Dark blue background */
+    background-color: #cfcdcd;
     color: #fff;
-    /* White text color */
     margin: 0;
     padding: 0;
 }
@@ -12,61 +10,103 @@ a {
     text-decoration: none;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-h2 {
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #06294D;
+    box-shadow: 1px 1px 2px #417749;
+    z-index: 1000;
+}
+
+.site-logo {
+    padding: .25rem;
+    margin-right: 50px;
+}
+
+.site-logo .logo-link {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 22px;
+    text-transform: capitalize;
     color: #fff;
-    /* White heading text color */
-    font-size: 48px;
-    margin-bottom: 10px;
-    text-align: center;
+    border-top: 3px solid #417749;
 }
 
-.destination {
-    color: #b4b4b4;
-    /* White heading text color */
-    font-size: 36px;
-    text-align: center;
+.navigation {
+    list-style: none;
+    display: flex;
+    gap: 1.4rem;
+    margin-right: 50px;
 }
 
-.date {
-    color: #b4b4b4;
-    font-size: 24px;
-    text-align: left;
+.navigation .link a {
+    padding: .25rem .5rem;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    border-top: 1px solid transparent;
+    transition: all .6s;
 }
 
-p {
-    margin-bottom: 5px;
+.navigation .link:hover a {
+    color: #417749;
+    border-top: 1px solid #417749;
 }
 
-#info {
-    margin-bottom: 20px;
+.destination,
+.date,
+.passengers {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    line-height: 22px;
+    height: 130px;
+}
+
+.info>div {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* Added margin-right for spacing */
+}
+
+.separator {
+    color: #fff;
 }
 
 #flight-list {
-    /* Removed display: grid; */
+    margin-top: 150px;
 }
 
 .flight-item {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .boarding-pass {
     background-color: #222;
-    /* Dark gray background */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    /* Increased shadow intensity */
     transition: transform 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Align content to the ends */
 }
 
 .boarding-pass:hover {
@@ -90,53 +130,39 @@ p {
 .price-business,
 .price-first {
     color: #fff;
-    /* White text color */
     border-radius: 10px;
     padding: 20px;
-    height: 150px;
-    /* Set a larger fixed height for all price boxes */
+    height: 250px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    /* Increased shadow intensity */
     transition: transform 0.3s ease, background-color 0.3s ease;
-    /* Added animation for transform and background-color */
     display: flex;
     flex-direction: column;
-    /* Display flex items vertically */
     align-items: center;
-    /* Center content horizontally */
     justify-content: center;
-    /* Center content vertically */
 }
 
 .ticket-price {
     font-size: 36px;
 }
 
-
 .price-economy {
-    background-color: #2f9ee7cc;
+    background-color: #417749;
     font-size: 20px;
-    /* Main blue color */
 }
 
 .price-business {
-    background-color: #1e7cbbcc;
-    /* Red color for business */
+    background-color: #38673f;
     font-size: 20px;
 }
 
 .price-first {
-    background-color: #114a70cc;
-    /* Dark gray color for first class */
+    background-color: #224127;
     font-size: 20px;
 }
 
-/* Added hover effect for price boxes */
 .price-economy:hover,
 .price-business:hover,
 .price-first:hover {
     transform: scale(1.05);
-    /* Scale up the box on hover */
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
-    /* Increase shadow intensity on hover */
 }
